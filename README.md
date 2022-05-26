@@ -1,12 +1,16 @@
 # Easyutil-Discordjs
 
-What is this?
+## ⚠️ **WARNING** ⚠️
+This package uses discord.js@dev, which is not officially supported.
+(discord.js@14.0.0dev)
+
+### What is this?
 
 Easyutil-Discordjs is a library that allows you to manage easily navigation embeds.
-
-How to use it?
+### How to use it?
 
 ```typescript
+import { EmbedBuilder } from 'discord.js';
 import NavEmbedBuilder from 'easyutil-discordjs';
 
 // Your command handler...

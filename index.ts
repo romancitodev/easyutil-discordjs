@@ -56,7 +56,7 @@ export class NavEmbedBuilder {
             const row = new ActionRowBuilder<MessageActionRowComponentBuilder>().addComponents(buttons);
             if (interaction.id === interaction.id)
             (await rep).edit({ embeds: [this.embeds[this.counter].setFooter({
-                text: `page ${this.counter} of ${this.embeds.length}`
+                text: `page ${this.counter + 1} of ${this.embeds.length}`
             })], components: [row] })
         })
 

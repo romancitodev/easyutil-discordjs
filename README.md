@@ -17,7 +17,7 @@
 
 ## ⚠️ **WARNING** ⚠️
 This package uses discord.js@dev, which is not officially supported.
-(discord.js@14.0.0dev)
+(discord.js@14.0.0-dev.1653480262-68d5169)
 
 ### 📜 Introduction
 Easyutil-Discordjs is a library that allows you to manage easily navigation embeds.

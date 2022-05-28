@@ -84,7 +84,7 @@ class NavEmbedBuilder {
                     (yield rep).edit({
                         embeds: [
                             this.embeds[this.counter].setFooter({
-                                text: `page ${this.counter} of ${this.embeds.length}`
+                                text: `page ${this.counter + 1} of ${this.embeds.length}`
                             })
                         ],
                         components: [row]

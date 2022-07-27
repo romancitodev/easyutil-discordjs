@@ -9,15 +9,15 @@
 <img src="https://img.shields.io/badge/Made%20with-TypeScript-blue?style=for-the-badge&logo=Typescript" alt= "Lang">
 </a>
 <a href = "https://www.npmjs.com/package/easyutil-discordjs">
-<img src="https://img.shields.io/badge/Version-0.1.3-greeen?style=for-the-badge&logo=npm">
+<img src="https://img.shields.io/badge/Version-1.0.0-greeen?style=for-the-badge&logo=npm">
 </a>
 </div>
 
 # Easyutil-Discordjs
 
-## ⚠️ **WARNING** ⚠️
-This package uses discord.js@dev, which is not officially supported.
-(discord.js@14.0.0-dev.1653480262-68d5169)
+
+## ℹ What version i need for discord.js? 
+Discord.js V 14.0.x
 
 ### 📜 Introduction
 Easyutil-Discordjs is a library that allows you to manage easily navigation embeds.
@@ -28,12 +28,12 @@ Easyutil-Discordjs is a library that allows you to manage easily navigation embe
 ```cmd
 npm i easyutil-discordjs
 ```
-### 📦 Example of use
+### 📦 Example of use - (Basic)
 ```typescript
 // Language: TypeScript
 
 import { EmbedBuilder } from 'discord.js';
-import NavEmbedBuilder from 'easyutil-discordjs';
+import { PaginationBuilder } from 'easyutil-discordjs';
 
 // Your interaction command handler...
 
@@ -43,6 +43,34 @@ for (let i = 1; i <= 5; i++) {
 	}
 	
 // The NavEmbedBuilder class initialize with an array of embeds
-const nav = new NavEmbedBuilder(embeds);
+const nav = new PaginationBuilder({embeds: embeds});
+nav.start(interaction);
+```
+
+### 📷 Screenshots:
+
+
+### 📦 Example of use - (Advanced)
+
+```typescript
+// Language: TypeScript
+
+import { EmbedBuilder } from 'discord.js';
+import { PaginationBuilder } from 'easyutil-discordjs';
+
+// Your interaction command handler...
+
+const embeds: EmbedBuilder[] = [];
+for (let i = 1; i <= 5; i++) {
+	embeds.push(new EmbedBuilder().setTitle(`Category ${i}`).setDescription("Description"));
+	}
+	
+// The NavEmbedBuilder class initialize with an array of embeds
+const nav = new PaginationBuilder({
+	embeds: embeds, options: {
+		message: "Botones expirados!", 
+		buttons: {first: '✔', left: '👻', mid: '🤖', right: '⌛', last: '🎁'}
+		}
+	});
 nav.start(interaction);
 ```

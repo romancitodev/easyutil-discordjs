@@ -1,0 +1,27 @@
+{
+  "name": "easyutil-discordjs",
+  "version": "1.0.2",
+  "description": "A package to manage more easy navigation system with embeds in discord.js",
+  "main": "dist/index.js",
+  "scripts": {},
+  "author": "ElShyrux",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChirujanoCodding/easyutil-discordjs.git"
+  },
+  "keywords": [
+    "discord.js",
+    "bot",
+    "discord",
+    "embeds",
+    "navigation"
+  ],
+  "bugs": {
+    "url": "https://github.com/ChirujanoCodding/easyutil-discordjs/issues"
+  },
+  "homepage": "https://github.com/ChirujanoCodding/easyutil-discordjs#readme",
+  "dependencies": {
+    "discord.js": "14.6.0"
+  }
+}

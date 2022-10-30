@@ -7,7 +7,7 @@ export class PaginationBuilder {
     private counter: number = 0;
     constructor(data: BuilderOptions) {
         if (data.embeds.length < 2) throw new Error('NavEmbedBuilder requires at least 2 embeds');
-        if (!data.embeds.every(embed => typeof embed === typeof EmbedBuilder)) throw new Error('All items of the array must be EmbedBuilder type')
+        if (!data.embeds.every(embed => embed instanceof EmbedBuilder)) throw new Error('All items of the array must be EmbedBuilder type')
         this.embeds = data.embeds;
         this.data = data
     }
